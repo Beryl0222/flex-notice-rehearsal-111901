@@ -1,0 +1,71 @@
+{
+  "notices": [
+    {
+      "id": "N1",
+      "author": "M1",
+      "sentAt": "2026-08-01T23:40:00+08:00",
+      "text": "前湾 20 分钟后下调 4 单位，一小时；医疗类资源除外。两段一并接。"
+    },
+    {
+      "id": "N2",
+      "author": "M1",
+      "sentAt": "2026-08-02T00:05:00+08:00",
+      "text": "前一条第二段恢复，这次只说前站。"
+    }
+  ],
+  "resources": [
+    {
+      "id": "R1",
+      "site": "前湾东",
+      "aliases": [
+        "前站",
+        "东站"
+      ],
+      "category": "商用",
+      "capacity": 5
+    },
+    {
+      "id": "R2",
+      "site": "前湾西",
+      "aliases": [
+        "前站",
+        "西站"
+      ],
+      "category": "医疗",
+      "capacity": 4
+    }
+  ],
+  "offers": [
+    {
+      "id": "A1",
+      "resourceId": "R1",
+      "from": "2026-08-02T00:00:00+08:00",
+      "to": "2026-08-02T00:30:00+08:00",
+      "quantity": 4,
+      "kind": "conditional"
+    },
+    {
+      "id": "A2",
+      "resourceId": "R1",
+      "from": "2026-08-02T00:30:00+08:00",
+      "to": "2026-08-02T01:00:00+08:00",
+      "quantity": 2,
+      "kind": "conditional"
+    }
+  ],
+  "roles": [
+    {
+      "id": "M1",
+      "entitlements": [
+        "issue",
+        "revise"
+      ]
+    },
+    {
+      "id": "M2",
+      "entitlements": [
+        "confirm"
+      ]
+    }
+  ]
+}
