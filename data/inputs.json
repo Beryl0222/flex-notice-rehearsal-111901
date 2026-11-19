@@ -1,4 +1,10 @@
 {
+  "drill": {
+    "id": "DRILL-2026-0802",
+    "name": "跨午夜调节通知作用域演练（全虚构）",
+    "tz": "+08:00",
+    "note": "所有设施、档位、编号与消息均为合成内容，结果仅供人工练习与核对，不连接或控制任何设备。"
+  },
   "notices": [
     {
       "id": "N1",
@@ -8,31 +14,111 @@
     },
     {
       "id": "N2",
-      "author": "M1",
+      "author": "C1",
+      "sentAt": "2026-08-01T23:50:00+08:00",
+      "text": "前湾东 A1、A2 我方准备接受，等值班确认。"
+    },
+    {
+      "id": "N3",
+      "author": "C1",
+      "sentAt": "2026-08-02T00:00:00+08:00",
+      "text": "更正：A2 主动减少 1 单位，00:30 到 01:00 的量改为 1。"
+    },
+    {
+      "id": "N4",
+      "author": "M2",
       "sentAt": "2026-08-02T00:05:00+08:00",
+      "text": "确认 A1、A2 本轮接受。"
+    },
+    {
+      "id": "N5",
+      "author": "M1",
+      "sentAt": "2026-08-02T00:10:00+08:00",
       "text": "前一条第二段恢复，这次只说前站。"
+    },
+    {
+      "id": "N6",
+      "author": "M1",
+      "sentAt": "2026-08-02T00:15:00+08:00",
+      "text": "刚才说反了，归还的是第二段。"
+    },
+    {
+      "id": "N7",
+      "author": "C2",
+      "sentAt": "2026-08-02T00:20:00+08:00",
+      "text": "申请前湾西 00:00 到 00:30 下调 3 单位。"
+    },
+    {
+      "id": "N8",
+      "author": "M2",
+      "sentAt": "2026-08-02T00:25:00+08:00",
+      "text": "值班裁定：N6 的解释一成立，按前湾东第二段归还办理。"
+    },
+    {
+      "id": "N9",
+      "author": "M1",
+      "sentAt": "2026-08-02T00:28:00+08:00",
+      "text": "前湾 20 分钟后下调 4 单位，一小时；医疗类资源除外。两段一并接。"
+    },
+    {
+      "id": "N10",
+      "author": "M1",
+      "sentAt": "2026-08-02T00:32:00+08:00",
+      "text": "更正前条：前湾下调改为 3 单位，一小时；医疗类资源除外。"
+    },
+    {
+      "id": "N11",
+      "author": "M1",
+      "sentAt": "2026-08-02T00:35:00+08:00",
+      "text": "撤回 A2 第二段。"
+    },
+    {
+      "id": "N12",
+      "author": "M2",
+      "sentAt": "2026-08-02T00:37:00+08:00",
+      "text": "确认 A3。"
+    },
+    {
+      "id": "N13",
+      "author": "M1",
+      "sentAt": "2026-08-02T00:42:00+08:00",
+      "text": "前湾、后湾下调 2 单位，时长半小时，00:45 起；医疗类资源除外。可分段独立接受。"
+    },
+    {
+      "id": "N14",
+      "author": "M2",
+      "sentAt": "2026-08-02T00:48:00+08:00",
+      "text": "确认 A3、A5。"
     }
   ],
   "resources": [
     {
       "id": "R1",
       "site": "前湾东",
-      "aliases": [
-        "前站",
-        "东站"
-      ],
+      "aliases": ["前站", "东站"],
       "category": "商用",
       "capacity": 5
     },
     {
       "id": "R2",
       "site": "前湾西",
-      "aliases": [
-        "前站",
-        "西站"
-      ],
+      "aliases": ["前站", "西站"],
       "category": "医疗",
       "capacity": 4
+    },
+    {
+      "id": "R3",
+      "site": "后湾南",
+      "aliases": ["后站", "南站"],
+      "category": "商用",
+      "capacity": 6
+    },
+    {
+      "id": "R4",
+      "site": "后湾北",
+      "aliases": ["后站", "北站"],
+      "category": "医疗",
+      "capacity": 3
     }
   ],
   "offers": [
@@ -42,7 +128,9 @@
       "from": "2026-08-02T00:00:00+08:00",
       "to": "2026-08-02T00:30:00+08:00",
       "quantity": 4,
-      "kind": "conditional"
+      "kind": "group",
+      "groupId": "G1",
+      "segmentIndex": 1
     },
     {
       "id": "A2",
@@ -50,22 +138,82 @@
       "from": "2026-08-02T00:30:00+08:00",
       "to": "2026-08-02T01:00:00+08:00",
       "quantity": 2,
-      "kind": "conditional"
+      "kind": "group",
+      "groupId": "G1",
+      "segmentIndex": 2,
+      "alternatives": [
+        {
+          "id": "A2-X1",
+          "from": "2026-08-02T01:00:00+08:00",
+          "to": "2026-08-02T01:30:00+08:00",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "id": "A3",
+      "resourceId": "R1",
+      "from": "2026-08-02T00:00:00+08:00",
+      "to": "2026-08-02T00:30:00+08:00",
+      "quantity": 2,
+      "kind": "independent"
+    },
+    {
+      "id": "A4",
+      "resourceId": "R3",
+      "from": "2026-08-02T00:00:00+08:00",
+      "to": "2026-08-02T00:30:00+08:00",
+      "quantity": 3,
+      "kind": "independent"
+    },
+    {
+      "id": "A5",
+      "resourceId": "R1",
+      "from": "2026-08-02T00:00:00+08:00",
+      "to": "2026-08-02T00:30:00+08:00",
+      "quantity": 3,
+      "kind": "independent"
+    },
+    {
+      "id": "A6",
+      "resourceId": "R3",
+      "from": "2026-08-02T00:30:00+08:00",
+      "to": "2026-08-02T01:00:00+08:00",
+      "quantity": 2,
+      "kind": "independent",
+      "confirmedAt": "2026-08-01T23:30:00+08:00",
+      "confirmedBy": "M2",
+      "confirmedNoticeId": null
     }
   ],
   "roles": [
     {
       "id": "M1",
-      "entitlements": [
-        "issue",
-        "revise"
-      ]
+      "name": "调节发起人",
+      "entitlements": ["issue", "revise"]
     },
     {
       "id": "M2",
-      "entitlements": [
-        "confirm"
-      ]
+      "name": "值班员",
+      "entitlements": ["confirm", "resolve"]
+    },
+    {
+      "id": "C1",
+      "name": "前湾东协调员",
+      "entitlements": ["respond"],
+      "resourceIds": ["R1"]
+    },
+    {
+      "id": "C2",
+      "name": "前湾西协调员",
+      "entitlements": ["respond"],
+      "resourceIds": ["R2"]
+    },
+    {
+      "id": "C3",
+      "name": "后湾南协调员",
+      "entitlements": ["respond"],
+      "resourceIds": ["R3"]
     }
   ]
 }

@@ -1,0 +1,483 @@
+{
+  "drillId": "DRILL-2026-0802",
+  "cutoff": "2026-08-02 00:38",
+  "received": [
+    {
+      "noticeId": "N1",
+      "at": "2026-08-01 23:40",
+      "author": "M1",
+      "text": "前湾 20 分钟后下调 4 单位，一小时；医疗类资源除外。两段一并接。",
+      "duplicateOf": null,
+      "unauthorized": false
+    },
+    {
+      "noticeId": "N2",
+      "at": "2026-08-01 23:50",
+      "author": "C1",
+      "text": "前湾东 A1、A2 我方准备接受，等值班确认。",
+      "duplicateOf": null,
+      "unauthorized": false
+    },
+    {
+      "noticeId": "N3",
+      "at": "2026-08-02 00:00",
+      "author": "C1",
+      "text": "更正：A2 主动减少 1 单位，00:30 到 01:00 的量改为 1。",
+      "duplicateOf": null,
+      "unauthorized": false
+    },
+    {
+      "noticeId": "N4",
+      "at": "2026-08-02 00:05",
+      "author": "M2",
+      "text": "确认 A1、A2 本轮接受。",
+      "duplicateOf": null,
+      "unauthorized": false
+    },
+    {
+      "noticeId": "N5",
+      "at": "2026-08-02 00:10",
+      "author": "M1",
+      "text": "前一条第二段恢复，这次只说前站。",
+      "duplicateOf": null,
+      "unauthorized": false
+    },
+    {
+      "noticeId": "N6",
+      "at": "2026-08-02 00:15",
+      "author": "M1",
+      "text": "刚才说反了，归还的是第二段。",
+      "duplicateOf": null,
+      "unauthorized": false
+    },
+    {
+      "noticeId": "N7",
+      "at": "2026-08-02 00:20",
+      "author": "C2",
+      "text": "申请前湾西 00:00 到 00:30 下调 3 单位。",
+      "duplicateOf": null,
+      "unauthorized": false
+    },
+    {
+      "noticeId": "N8",
+      "at": "2026-08-02 00:25",
+      "author": "M2",
+      "text": "值班裁定：N6 的解释一成立，按前湾东第二段归还办理。",
+      "duplicateOf": null,
+      "unauthorized": false
+    },
+    {
+      "noticeId": "N9",
+      "at": "2026-08-02 00:28",
+      "author": "M1",
+      "text": "前湾 20 分钟后下调 4 单位，一小时；医疗类资源除外。两段一并接。",
+      "duplicateOf": "N1",
+      "unauthorized": false
+    },
+    {
+      "noticeId": "N10",
+      "at": "2026-08-02 00:32",
+      "author": "M1",
+      "text": "更正前条：前湾下调改为 3 单位，一小时；医疗类资源除外。",
+      "duplicateOf": null,
+      "unauthorized": false
+    },
+    {
+      "noticeId": "N11",
+      "at": "2026-08-02 00:35",
+      "author": "M1",
+      "text": "撤回 A2 第二段。",
+      "duplicateOf": null,
+      "unauthorized": false
+    },
+    {
+      "noticeId": "N12",
+      "at": "2026-08-02 00:37",
+      "author": "M2",
+      "text": "确认 A3。",
+      "duplicateOf": null,
+      "unauthorized": false
+    }
+  ],
+  "confirmedByCutoff": [
+    {
+      "offerId": "A3",
+      "site": "前湾东",
+      "window": "2026-08-02 00:00-00:30",
+      "quantity": 2
+    },
+    {
+      "offerId": "A6",
+      "site": "后湾南",
+      "window": "2026-08-02 00:30-01:00",
+      "quantity": 2
+    }
+  ],
+  "openAmbiguities": [],
+  "offers": [
+    {
+      "id": "A1",
+      "resourceId": "R1",
+      "site": "前湾东",
+      "category": "商用",
+      "from": "2026-08-02 00:00",
+      "to": "2026-08-02 00:30",
+      "originalQuantity": 4,
+      "currentQuantity": 4,
+      "kind": "group",
+      "groupId": "G1",
+      "segmentIndex": 1,
+      "status": "reschedulable",
+      "holdId": "hold:A1",
+      "pendingReason": "整组 G1 因 A2 被撤回而整组失效",
+      "sourceNotices": [
+        "N2",
+        "N4"
+      ],
+      "alternatives": [],
+      "history": [],
+      "atCutoff": "reschedulable"
+    },
+    {
+      "id": "A2",
+      "resourceId": "R1",
+      "site": "前湾东",
+      "category": "商用",
+      "from": "2026-08-02 00:30",
+      "to": "2026-08-02 01:00",
+      "originalQuantity": 2,
+      "currentQuantity": 1,
+      "kind": "group",
+      "groupId": "G1",
+      "segmentIndex": 2,
+      "status": "withdrawn",
+      "holdId": "hold:A2",
+      "pendingReason": null,
+      "sourceNotices": [
+        "N2",
+        "N3",
+        "N4",
+        "N11"
+      ],
+      "alternatives": [
+        {
+          "id": "A2-X1",
+          "from": "2026-08-02 01:00",
+          "to": "2026-08-02 01:30",
+          "quantity": 2
+        }
+      ],
+      "history": [
+        {
+          "at": 1785600000000,
+          "noticeId": "N3",
+          "from": 2,
+          "to": 1
+        }
+      ],
+      "atCutoff": "withdrawn"
+    },
+    {
+      "id": "A3",
+      "resourceId": "R1",
+      "site": "前湾东",
+      "category": "商用",
+      "from": "2026-08-02 00:00",
+      "to": "2026-08-02 00:30",
+      "originalQuantity": 2,
+      "currentQuantity": 2,
+      "kind": "independent",
+      "groupId": null,
+      "segmentIndex": null,
+      "status": "confirmed",
+      "holdId": "hold:A3",
+      "pendingReason": null,
+      "sourceNotices": [
+        "N12"
+      ],
+      "alternatives": [],
+      "history": [],
+      "atCutoff": "confirmed"
+    },
+    {
+      "id": "A4",
+      "resourceId": "R3",
+      "site": "后湾南",
+      "category": "商用",
+      "from": "2026-08-02 00:00",
+      "to": "2026-08-02 00:30",
+      "originalQuantity": 3,
+      "currentQuantity": 3,
+      "kind": "independent",
+      "groupId": null,
+      "segmentIndex": null,
+      "status": "candidate",
+      "holdId": null,
+      "pendingReason": null,
+      "sourceNotices": [],
+      "alternatives": [],
+      "history": [],
+      "atCutoff": "candidate"
+    },
+    {
+      "id": "A5",
+      "resourceId": "R1",
+      "site": "前湾东",
+      "category": "商用",
+      "from": "2026-08-02 00:00",
+      "to": "2026-08-02 00:30",
+      "originalQuantity": 3,
+      "currentQuantity": 3,
+      "kind": "independent",
+      "groupId": null,
+      "segmentIndex": null,
+      "status": "confirmed",
+      "holdId": "hold:A5",
+      "pendingReason": null,
+      "sourceNotices": [
+        "N14"
+      ],
+      "alternatives": [],
+      "history": [],
+      "atCutoff": "candidate"
+    },
+    {
+      "id": "A6",
+      "resourceId": "R3",
+      "site": "后湾南",
+      "category": "商用",
+      "from": "2026-08-02 00:30",
+      "to": "2026-08-02 01:00",
+      "originalQuantity": 2,
+      "currentQuantity": 2,
+      "kind": "independent",
+      "groupId": null,
+      "segmentIndex": null,
+      "status": "confirmed",
+      "holdId": "hold:A6",
+      "pendingReason": null,
+      "sourceNotices": [],
+      "alternatives": [],
+      "history": [],
+      "atCutoff": "confirmed"
+    }
+  ],
+  "events": [
+    {
+      "seq": 1,
+      "at": null,
+      "kind": "baseline",
+      "message": "A6 作为演练开始前已确认承诺入账",
+      "detail": {
+        "offerId": "A6",
+        "at": 1785598200000
+      }
+    },
+    {
+      "seq": 2,
+      "at": 1785598800000,
+      "kind": "application",
+      "message": "N1 生成调节申请",
+      "detail": {
+        "appId": "APP-N1",
+        "matches": [
+          "A1",
+          "A2",
+          "A3",
+          "A5"
+        ]
+      }
+    },
+    {
+      "seq": 3,
+      "at": 1785599400000,
+      "kind": "ready",
+      "message": "A1 进入准备接受",
+      "detail": {
+        "offerId": "A1",
+        "noticeId": "N2"
+      }
+    },
+    {
+      "seq": 4,
+      "at": 1785599400000,
+      "kind": "ready",
+      "message": "A2 进入准备接受",
+      "detail": {
+        "offerId": "A2",
+        "noticeId": "N2"
+      }
+    },
+    {
+      "seq": 5,
+      "at": 1785600000000,
+      "kind": "adjust",
+      "message": "N3 调整 A2：2→1",
+      "detail": {
+        "offerId": "A2",
+        "before": 2,
+        "next": 1
+      }
+    },
+    {
+      "seq": 6,
+      "at": 1785600300000,
+      "kind": "confirm",
+      "message": "A1 由 M2 确认",
+      "detail": {
+        "offerId": "A1",
+        "noticeId": "N4"
+      }
+    },
+    {
+      "seq": 7,
+      "at": 1785600300000,
+      "kind": "confirm",
+      "message": "A2 由 M2 确认",
+      "detail": {
+        "offerId": "A2",
+        "noticeId": "N4"
+      }
+    },
+    {
+      "seq": 8,
+      "at": 1785600600000,
+      "kind": "ambiguity-open",
+      "message": "N5 产生歧义 AMB-N5",
+      "detail": {
+        "ambiguityId": "AMB-N5",
+        "offerId": "A2",
+        "offerIds": [
+          "A2"
+        ]
+      }
+    },
+    {
+      "seq": 9,
+      "at": 1785600900000,
+      "kind": "ambiguity-followup",
+      "message": "N6 跟进歧义 AMB-N5",
+      "detail": {
+        "ambiguityId": "AMB-N5"
+      }
+    },
+    {
+      "seq": 10,
+      "at": 1785601200000,
+      "kind": "scope-request",
+      "message": "N7 对 前湾西 的申请",
+      "detail": {
+        "appId": "APP-N7-R2",
+        "feasible": true
+      }
+    },
+    {
+      "seq": 11,
+      "at": 1785601500000,
+      "kind": "ambiguity-resolve",
+      "message": "AMB-N5 由 N8 裁定",
+      "detail": {
+        "ambiguityId": "AMB-N5",
+        "chosen": "A2",
+        "offerId": "A2"
+      }
+    },
+    {
+      "seq": 12,
+      "at": 1785601680000,
+      "kind": "duplicate",
+      "message": "N9 识别为 N1 的补发副本",
+      "detail": {
+        "noticeId": "N9",
+        "duplicateOf": "N1"
+      }
+    },
+    {
+      "seq": 13,
+      "at": 1785601920000,
+      "kind": "application-revise",
+      "message": "N10 更正 N1 的申请",
+      "detail": {
+        "appId": "APP-N1",
+        "matches": [
+          "A1",
+          "A2",
+          "A3",
+          "A5"
+        ]
+      }
+    },
+    {
+      "seq": 14,
+      "at": 1785602100000,
+      "kind": "revoke",
+      "message": "N11 withdraw A2",
+      "detail": {
+        "offerId": "A2"
+      }
+    },
+    {
+      "seq": 15,
+      "at": 1785602100000,
+      "kind": "group-invalidate",
+      "message": "A1 因整组联动失效",
+      "detail": {
+        "offerId": "A1",
+        "groupId": "G1",
+        "trigger": "A2"
+      }
+    },
+    {
+      "seq": 16,
+      "at": 1785602220000,
+      "kind": "confirm",
+      "message": "A3 由 M2 确认",
+      "detail": {
+        "offerId": "A3",
+        "noticeId": "N12"
+      }
+    }
+  ],
+  "ledgerAtCutoff": [
+    {
+      "resourceId": "R1",
+      "site": "前湾东",
+      "slotStart": "2026-08-02 00:00",
+      "slotEnd": "2026-08-02 00:30",
+      "capacity": 5,
+      "free": 3,
+      "occupied": 2,
+      "holds": [
+        {
+          "holdId": "hold:A3",
+          "qty": 2
+        }
+      ]
+    },
+    {
+      "resourceId": "R1",
+      "site": "前湾东",
+      "slotStart": "2026-08-02 00:30",
+      "slotEnd": "2026-08-02 01:00",
+      "capacity": 5,
+      "free": 5,
+      "occupied": 0,
+      "holds": []
+    },
+    {
+      "resourceId": "R3",
+      "site": "后湾南",
+      "slotStart": "2026-08-02 00:30",
+      "slotEnd": "2026-08-02 01:00",
+      "capacity": 6,
+      "free": 4,
+      "occupied": 2,
+      "holds": [
+        {
+          "holdId": "hold:A6",
+          "qty": 2
+        }
+      ]
+    }
+  ]
+}

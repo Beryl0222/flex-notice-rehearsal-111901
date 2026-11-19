@@ -1,0 +1,711 @@
+{
+  "drill": {
+    "id": "DRILL-2026-0802",
+    "name": "跨午夜调节通知作用域演练（全虚构）",
+    "tz": "+08:00",
+    "note": "所有设施、档位、编号与消息均为合成内容，结果仅供人工练习与核对，不连接或控制任何设备。"
+  },
+  "generatedAt": 1795113175432,
+  "noticeResults": [
+    {
+      "noticeId": "N1",
+      "author": "M1",
+      "sentAt": 1785598800000,
+      "text": "前湾 20 分钟后下调 4 单位，一小时；医疗类资源除外。两段一并接。",
+      "drafts": [
+        "【调节申请 APP-N1】00:00-01:00（发话时刻 +20 分钟，时长 60 分钟）作用于 前湾东，下调 4 单位；例外排除 前湾西；接受条件：整组一次接受。匹配意向：A1、A2、A3、A5。"
+      ],
+      "effects": [],
+      "warnings": [
+        "例外判断：类别「医疗」→ 医疗 类：R2、R4"
+      ],
+      "duplicateOf": null,
+      "unauthorized": false
+    },
+    {
+      "noticeId": "N2",
+      "author": "C1",
+      "sentAt": 1785599400000,
+      "text": "前湾东 A1、A2 我方准备接受，等值班确认。",
+      "drafts": [
+        "【准备接受】A1 标记为“对方准备接受”，尚未确认、未占用容量，等待值班员确认。",
+        "【准备接受】A2 标记为“对方准备接受”，尚未确认、未占用容量，等待值班员确认。"
+      ],
+      "effects": [],
+      "warnings": [],
+      "duplicateOf": null,
+      "unauthorized": false
+    },
+    {
+      "noticeId": "N3",
+      "author": "C1",
+      "sentAt": 1785600000000,
+      "text": "更正：A2 主动减少 1 单位，00:30 到 01:00 的量改为 1。",
+      "drafts": [
+        "【已登记】A2 申报量 2→1（来源原句可回溯），待确认流程。"
+      ],
+      "effects": [
+        "A2 量：2 → 1"
+      ],
+      "warnings": [],
+      "duplicateOf": null,
+      "unauthorized": false
+    },
+    {
+      "noticeId": "N4",
+      "author": "M2",
+      "sentAt": 1785600300000,
+      "text": "确认 A1、A2 本轮接受。",
+      "drafts": [
+        "【本轮已确认】A1（前湾东 00:00-00:30，4 单位）已占用容量；与“准备接受”相区别。",
+        "【本轮已确认】A2（前湾东 00:30-01:00，1 单位）已占用容量；与“准备接受”相区别。"
+      ],
+      "effects": [
+        "A1 → confirmed，占用 4 单位",
+        "A2 → confirmed，占用 1 单位"
+      ],
+      "warnings": [],
+      "duplicateOf": null,
+      "unauthorized": false
+    },
+    {
+      "noticeId": "N5",
+      "author": "M1",
+      "sentAt": 1785600600000,
+      "text": "前一条第二段恢复，这次只说前站。",
+      "drafts": [
+        "【歧义挂起 AMB-N5】“前一条第二段恢复；这次只说前站”存在 2 种合理解释，涉及资源与时段如下：\n  解释一：A2（前湾东/商用/容量5，00:30-01:00，1 单位，当前 confirmed）\n  解释二：（无意向）（前湾西/医疗/容量4，第2段（资料中无意向），0 单位，当前 no-offer）\n仅上述承诺暂缓（容量已暂挂），其余确定的解释与承诺继续办理；请值班员裁定后恢复或撤回。"
+      ],
+      "effects": [],
+      "warnings": [],
+      "duplicateOf": null,
+      "unauthorized": false
+    },
+    {
+      "noticeId": "N6",
+      "author": "M1",
+      "sentAt": 1785600900000,
+      "text": "刚才说反了，归还的是第二段。",
+      "drafts": [
+        "【歧义跟进 AMB-N5】N6 是对该歧义的更正（“刚才说反了，归还的是第二段。”），原承诺继续暂缓，等待值班裁定；与本歧义无关的响应不受影响。"
+      ],
+      "effects": [],
+      "warnings": [],
+      "duplicateOf": null,
+      "unauthorized": false
+    },
+    {
+      "noticeId": "N7",
+      "author": "C2",
+      "sentAt": 1785601200000,
+      "text": "申请前湾西 00:00 到 00:30 下调 3 单位。",
+      "drafts": [
+        "【申请待确认】前湾西 00:00-00:30 下调 3 单位容量可行，等待值班确认后才占用。"
+      ],
+      "effects": [],
+      "warnings": [],
+      "duplicateOf": null,
+      "unauthorized": false
+    },
+    {
+      "noticeId": "N8",
+      "author": "M2",
+      "sentAt": 1785601500000,
+      "text": "值班裁定：N6 的解释一成立，按前湾东第二段归还办理。",
+      "drafts": [
+        "【裁定恢复】A2 按选定解释恢复为已确认，容量重新占用。"
+      ],
+      "effects": [],
+      "warnings": [],
+      "duplicateOf": null,
+      "unauthorized": false
+    },
+    {
+      "noticeId": "N9",
+      "author": "M1",
+      "sentAt": 1785601680000,
+      "text": "前湾 20 分钟后下调 4 单位，一小时；医疗类资源除外。两段一并接。",
+      "drafts": [
+        "【补发核对】本通知与 N1 内容及引用完全相同，按补发副本处理：不重复受理、不再次占用容量。"
+      ],
+      "effects": [],
+      "warnings": [],
+      "duplicateOf": "N1",
+      "unauthorized": false
+    },
+    {
+      "noticeId": "N10",
+      "author": "M1",
+      "sentAt": 1785601920000,
+      "text": "更正前条：前湾下调改为 3 单位，一小时；医疗类资源除外。",
+      "drafts": [
+        "【更正重审 APP-N1】00:00-01:00（沿用 N1 的发话时间口径（起点 00:00），时长按本句 60 分钟）作用于 前湾东，下调 3 单位；例外排除 前湾西；接受条件：未声明（默认逐段）。匹配意向：A1、A2、A3、A5。"
+      ],
+      "effects": [],
+      "warnings": [
+        "例外判断：类别「医疗」→ 医疗 类：R2、R4"
+      ],
+      "duplicateOf": null,
+      "unauthorized": false
+    },
+    {
+      "noticeId": "N11",
+      "author": "M1",
+      "sentAt": 1785602100000,
+      "text": "撤回 A2 第二段。",
+      "drafts": [
+        "【撤回】A2（前湾东 00:30-01:00）已确认承诺被授权文本改变，容量已释放。可改约替代时段：01:00-01:30 2 单位（A2-X1）。",
+        "【整组失效】A1 与 A2 同属组 G1（整组一次接受条件），一段失效导致该段不能单独保留，已释放容量并标记可重排（无替代时段）。"
+      ],
+      "effects": [
+        "A2 → withdrawn，释放 1 单位",
+        "A1 → reschedulable"
+      ],
+      "warnings": [],
+      "duplicateOf": null,
+      "unauthorized": false
+    },
+    {
+      "noticeId": "N12",
+      "author": "M2",
+      "sentAt": 1785602220000,
+      "text": "确认 A3。",
+      "drafts": [
+        "【本轮已确认】A3（前湾东 00:00-00:30，2 单位）已占用容量；与“准备接受”相区别。"
+      ],
+      "effects": [
+        "A3 → confirmed，占用 2 单位"
+      ],
+      "warnings": [],
+      "duplicateOf": null,
+      "unauthorized": false
+    },
+    {
+      "noticeId": "N13",
+      "author": "M1",
+      "sentAt": 1785602520000,
+      "text": "前湾、后湾下调 2 单位，时长半小时，00:45 起；医疗类资源除外。可分段独立接受。",
+      "drafts": [
+        "【调节申请 APP-N13】00:45-01:15（原句时钟区间（跨午夜按发话日解释））作用于 前湾东、后湾南，下调 2 单位；例外排除 前湾西、后湾北；接受条件：可分段独立接受。匹配意向：A6。"
+      ],
+      "effects": [],
+      "warnings": [
+        "例外判断：类别「医疗」→ 医疗 类：R2、R4"
+      ],
+      "duplicateOf": null,
+      "unauthorized": false
+    },
+    {
+      "noticeId": "N14",
+      "author": "M2",
+      "sentAt": 1785602880000,
+      "text": "确认 A3、A5。",
+      "drafts": [
+        "【提示】A3 本轮已确认，不重复占用。",
+        "【本轮已确认】A5（前湾东 00:00-00:30，3 单位）已占用容量；与“准备接受”相区别。"
+      ],
+      "effects": [
+        "A5 → confirmed，占用 3 单位"
+      ],
+      "warnings": [],
+      "duplicateOf": null,
+      "unauthorized": false
+    }
+  ],
+  "offers": [
+    {
+      "id": "A1",
+      "resourceId": "R1",
+      "site": "前湾东",
+      "category": "商用",
+      "from": "2026-08-02 00:00",
+      "to": "2026-08-02 00:30",
+      "originalQuantity": 4,
+      "currentQuantity": 4,
+      "kind": "group",
+      "groupId": "G1",
+      "segmentIndex": 1,
+      "status": "reschedulable",
+      "holdId": "hold:A1",
+      "pendingReason": "整组 G1 因 A2 被撤回而整组失效",
+      "sourceNotices": [
+        "N2",
+        "N4"
+      ],
+      "alternatives": [],
+      "history": []
+    },
+    {
+      "id": "A2",
+      "resourceId": "R1",
+      "site": "前湾东",
+      "category": "商用",
+      "from": "2026-08-02 00:30",
+      "to": "2026-08-02 01:00",
+      "originalQuantity": 2,
+      "currentQuantity": 1,
+      "kind": "group",
+      "groupId": "G1",
+      "segmentIndex": 2,
+      "status": "withdrawn",
+      "holdId": "hold:A2",
+      "pendingReason": null,
+      "sourceNotices": [
+        "N2",
+        "N3",
+        "N4",
+        "N11"
+      ],
+      "alternatives": [
+        {
+          "id": "A2-X1",
+          "from": "2026-08-02 01:00",
+          "to": "2026-08-02 01:30",
+          "quantity": 2
+        }
+      ],
+      "history": [
+        {
+          "at": 1785600000000,
+          "noticeId": "N3",
+          "from": 2,
+          "to": 1
+        }
+      ]
+    },
+    {
+      "id": "A3",
+      "resourceId": "R1",
+      "site": "前湾东",
+      "category": "商用",
+      "from": "2026-08-02 00:00",
+      "to": "2026-08-02 00:30",
+      "originalQuantity": 2,
+      "currentQuantity": 2,
+      "kind": "independent",
+      "groupId": null,
+      "segmentIndex": null,
+      "status": "confirmed",
+      "holdId": "hold:A3",
+      "pendingReason": null,
+      "sourceNotices": [
+        "N12"
+      ],
+      "alternatives": [],
+      "history": []
+    },
+    {
+      "id": "A4",
+      "resourceId": "R3",
+      "site": "后湾南",
+      "category": "商用",
+      "from": "2026-08-02 00:00",
+      "to": "2026-08-02 00:30",
+      "originalQuantity": 3,
+      "currentQuantity": 3,
+      "kind": "independent",
+      "groupId": null,
+      "segmentIndex": null,
+      "status": "candidate",
+      "holdId": null,
+      "pendingReason": null,
+      "sourceNotices": [],
+      "alternatives": [],
+      "history": []
+    },
+    {
+      "id": "A5",
+      "resourceId": "R1",
+      "site": "前湾东",
+      "category": "商用",
+      "from": "2026-08-02 00:00",
+      "to": "2026-08-02 00:30",
+      "originalQuantity": 3,
+      "currentQuantity": 3,
+      "kind": "independent",
+      "groupId": null,
+      "segmentIndex": null,
+      "status": "confirmed",
+      "holdId": "hold:A5",
+      "pendingReason": null,
+      "sourceNotices": [
+        "N14"
+      ],
+      "alternatives": [],
+      "history": []
+    },
+    {
+      "id": "A6",
+      "resourceId": "R3",
+      "site": "后湾南",
+      "category": "商用",
+      "from": "2026-08-02 00:30",
+      "to": "2026-08-02 01:00",
+      "originalQuantity": 2,
+      "currentQuantity": 2,
+      "kind": "independent",
+      "groupId": null,
+      "segmentIndex": null,
+      "status": "confirmed",
+      "holdId": "hold:A6",
+      "pendingReason": null,
+      "sourceNotices": [],
+      "alternatives": [],
+      "history": []
+    }
+  ],
+  "applications": [
+    {
+      "appId": "APP-N1",
+      "noticeId": "N10",
+      "revisesNoticeId": "N1",
+      "at": 1785601920000,
+      "action": "reduce",
+      "quantity": 3,
+      "resourceIds": [
+        "R1"
+      ],
+      "excludedIds": [
+        "R2"
+      ],
+      "from": 1785600000000,
+      "to": 1785603600000,
+      "windowBasis": "沿用 N1 的发话时间口径（起点 00:00），时长按本句 60 分钟",
+      "acceptance": null,
+      "status": "open",
+      "note": null
+    },
+    {
+      "appId": "APP-N7-R2",
+      "noticeId": "N7",
+      "at": 1785601200000,
+      "action": "request",
+      "quantity": 3,
+      "resourceIds": [
+        "R2"
+      ],
+      "excludedIds": [],
+      "from": 1785600000000,
+      "to": 1785601800000,
+      "windowBasis": "原句时钟区间（跨午夜按发话日解释）",
+      "acceptance": "independent",
+      "status": "open",
+      "note": null
+    },
+    {
+      "appId": "APP-N13",
+      "noticeId": "N13",
+      "revisesNoticeId": null,
+      "at": 1785602520000,
+      "action": "reduce",
+      "quantity": 2,
+      "resourceIds": [
+        "R1",
+        "R3"
+      ],
+      "excludedIds": [
+        "R2",
+        "R4"
+      ],
+      "from": 1785602700000,
+      "to": 1785604500000,
+      "windowBasis": "原句时钟区间（跨午夜按发话日解释）",
+      "acceptance": "independent",
+      "status": "open",
+      "note": null
+    }
+  ],
+  "ambiguities": [
+    {
+      "id": "AMB-N5",
+      "noticeId": "N5",
+      "openedAt": 1785600600000,
+      "sourceText": "前一条第二段恢复，这次只说前站。",
+      "clause": "前一条第二段恢复；这次只说前站",
+      "action": "restore",
+      "interpretations": [
+        {
+          "key": "A2",
+          "offerId": "A2",
+          "resource": "前湾东/商用/容量5",
+          "window": "00:30-01:00",
+          "quantity": 1,
+          "currentStatus": "confirmed"
+        },
+        {
+          "key": "empty:R2",
+          "offerId": null,
+          "resourceId": "R2",
+          "resource": "前湾西/医疗/容量4",
+          "window": "第2段（资料中无意向）",
+          "quantity": 0,
+          "currentStatus": "no-offer"
+        }
+      ],
+      "followUps": [
+        {
+          "noticeId": "N6",
+          "at": 1785600900000,
+          "text": "刚才说反了，归还的是第二段。"
+        }
+      ],
+      "status": "resolved",
+      "resolvedBy": "N8",
+      "chosenKey": "A2"
+    }
+  ],
+  "ledger": [
+    {
+      "resourceId": "R1",
+      "site": "前湾东",
+      "slotStart": "2026-08-02 00:00",
+      "slotEnd": "2026-08-02 00:30",
+      "capacity": 5,
+      "free": 0,
+      "occupied": 5,
+      "holds": [
+        {
+          "holdId": "hold:A3",
+          "qty": 2
+        },
+        {
+          "holdId": "hold:A5",
+          "qty": 3
+        }
+      ]
+    },
+    {
+      "resourceId": "R2",
+      "site": "前湾西",
+      "slotStart": "2026-08-02 00:00",
+      "slotEnd": "2026-08-02 00:30",
+      "capacity": 4,
+      "free": 4,
+      "occupied": 0,
+      "holds": []
+    },
+    {
+      "resourceId": "R1",
+      "site": "前湾东",
+      "slotStart": "2026-08-02 00:30",
+      "slotEnd": "2026-08-02 01:00",
+      "capacity": 5,
+      "free": 5,
+      "occupied": 0,
+      "holds": []
+    },
+    {
+      "resourceId": "R3",
+      "site": "后湾南",
+      "slotStart": "2026-08-02 00:30",
+      "slotEnd": "2026-08-02 01:00",
+      "capacity": 6,
+      "free": 4,
+      "occupied": 2,
+      "holds": [
+        {
+          "holdId": "hold:A6",
+          "qty": 2
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "seq": 1,
+      "at": null,
+      "kind": "baseline",
+      "message": "A6 作为演练开始前已确认承诺入账",
+      "detail": {
+        "offerId": "A6",
+        "at": 1785598200000
+      }
+    },
+    {
+      "seq": 2,
+      "at": 1785598800000,
+      "kind": "application",
+      "message": "N1 生成调节申请",
+      "detail": {
+        "appId": "APP-N1",
+        "matches": [
+          "A1",
+          "A2",
+          "A3",
+          "A5"
+        ]
+      }
+    },
+    {
+      "seq": 3,
+      "at": 1785599400000,
+      "kind": "ready",
+      "message": "A1 进入准备接受",
+      "detail": {
+        "offerId": "A1",
+        "noticeId": "N2"
+      }
+    },
+    {
+      "seq": 4,
+      "at": 1785599400000,
+      "kind": "ready",
+      "message": "A2 进入准备接受",
+      "detail": {
+        "offerId": "A2",
+        "noticeId": "N2"
+      }
+    },
+    {
+      "seq": 5,
+      "at": 1785600000000,
+      "kind": "adjust",
+      "message": "N3 调整 A2：2→1",
+      "detail": {
+        "offerId": "A2",
+        "before": 2,
+        "next": 1
+      }
+    },
+    {
+      "seq": 6,
+      "at": 1785600300000,
+      "kind": "confirm",
+      "message": "A1 由 M2 确认",
+      "detail": {
+        "offerId": "A1",
+        "noticeId": "N4"
+      }
+    },
+    {
+      "seq": 7,
+      "at": 1785600300000,
+      "kind": "confirm",
+      "message": "A2 由 M2 确认",
+      "detail": {
+        "offerId": "A2",
+        "noticeId": "N4"
+      }
+    },
+    {
+      "seq": 8,
+      "at": 1785600600000,
+      "kind": "ambiguity-open",
+      "message": "N5 产生歧义 AMB-N5",
+      "detail": {
+        "ambiguityId": "AMB-N5",
+        "offerId": "A2",
+        "offerIds": [
+          "A2"
+        ]
+      }
+    },
+    {
+      "seq": 9,
+      "at": 1785600900000,
+      "kind": "ambiguity-followup",
+      "message": "N6 跟进歧义 AMB-N5",
+      "detail": {
+        "ambiguityId": "AMB-N5"
+      }
+    },
+    {
+      "seq": 10,
+      "at": 1785601200000,
+      "kind": "scope-request",
+      "message": "N7 对 前湾西 的申请",
+      "detail": {
+        "appId": "APP-N7-R2",
+        "feasible": true
+      }
+    },
+    {
+      "seq": 11,
+      "at": 1785601500000,
+      "kind": "ambiguity-resolve",
+      "message": "AMB-N5 由 N8 裁定",
+      "detail": {
+        "ambiguityId": "AMB-N5",
+        "chosen": "A2",
+        "offerId": "A2"
+      }
+    },
+    {
+      "seq": 12,
+      "at": 1785601680000,
+      "kind": "duplicate",
+      "message": "N9 识别为 N1 的补发副本",
+      "detail": {
+        "noticeId": "N9",
+        "duplicateOf": "N1"
+      }
+    },
+    {
+      "seq": 13,
+      "at": 1785601920000,
+      "kind": "application-revise",
+      "message": "N10 更正 N1 的申请",
+      "detail": {
+        "appId": "APP-N1",
+        "matches": [
+          "A1",
+          "A2",
+          "A3",
+          "A5"
+        ]
+      }
+    },
+    {
+      "seq": 14,
+      "at": 1785602100000,
+      "kind": "revoke",
+      "message": "N11 withdraw A2",
+      "detail": {
+        "offerId": "A2"
+      }
+    },
+    {
+      "seq": 15,
+      "at": 1785602100000,
+      "kind": "group-invalidate",
+      "message": "A1 因整组联动失效",
+      "detail": {
+        "offerId": "A1",
+        "groupId": "G1",
+        "trigger": "A2"
+      }
+    },
+    {
+      "seq": 16,
+      "at": 1785602220000,
+      "kind": "confirm",
+      "message": "A3 由 M2 确认",
+      "detail": {
+        "offerId": "A3",
+        "noticeId": "N12"
+      }
+    },
+    {
+      "seq": 17,
+      "at": 1785602520000,
+      "kind": "application",
+      "message": "N13 生成调节申请",
+      "detail": {
+        "appId": "APP-N13",
+        "matches": [
+          "A6"
+        ]
+      }
+    },
+    {
+      "seq": 18,
+      "at": 1785602880000,
+      "kind": "confirm",
+      "message": "A5 由 M2 确认",
+      "detail": {
+        "offerId": "A5",
+        "noticeId": "N14"
+      }
+    }
+  ]
+}
